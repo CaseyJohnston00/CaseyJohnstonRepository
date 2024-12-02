@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentors - Game Dev Connect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>GameDevConnect</h1>
+    <div class="tagline">Bridging Senior Developers with Emerging Talent</div>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="GameDevConnect Logo" class="site-logo">
+      </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="internships.html">Internships</a>
+      <a href="mentors.html">Mentors</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact-us.html">Contact Us</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <div class="coming-soon">
+        <span>Coming Soon!</span>
+        <span class="arrow">&#8594;</span>
+      </div>
+      <a href="#" class="sign-up-link">
+        <button class="sign-up">Sign Up</button>
+      </a>
+      <a href="#" class="log-in-link">
+        <button class="log-in">Log In</button>
+      </a>
+    </div>
+  </header>
+  <script src="script.js"></script>
+  
+  <main>
+    <aside class="sidebar">
+        <form id="filterForm">
+          <div class="categories">
+            <h3>Filter by Category</h3>
+            <label><input type="checkbox" class="category-filter" value="game-design"> Game Design</label>
+            <label><input type="checkbox" class="category-filter" value="game-development"> Game Development</label>
+            <label><input type="checkbox" class="category-filter" value="level-design"> Level Design</label>
+            <label><input type="checkbox" class="category-filter" value="art-animation"> Art & Animation</label>
+            <label><input type="checkbox" class="category-filter" value="sound-design"> Sound Design</label>
+            <label><input type="checkbox" class="category-filter" value="qa"> Quality Assurance (QA)</label>
+            <label><input type="checkbox" class="category-filter" value="game-production"> Game Production</label>
+            <label><input type="checkbox" class="category-filter" value="ui-ux-design"> UI/UX Design</label>
+            <label><input type="checkbox" class="category-filter" value="game-writing"> Game Writing</label>
+            <label><input type="checkbox" class="category-filter" value="game-engineering"> Game Engineering</label>
+          </div>
+            <button type="button" onclick="applyFilters()">Apply Filters</button>
+            <button type="button" onclick="resetFilters()">Reset Filters</button>
+          </form>
+
+
+          <div id="chat-box" class="chat-box">
+            <div class="chat-container">
+              <div class="chat-header">
+                  <h3>Live Chat</h3>
+              </div>
+              <div class="chat-messages" id="chatMessages">
+                  <!-- Pre-programmed message -->
+                  <div class="message other">
+                      <p><strong>Admin:</strong> Welcome to the live chat! This feature is coming soon!</p>
+                  </div>
+              </div>
+              <div class="chat-input">
+                  <input type="text" id="userMessage" placeholder="Type your message here..." />
+                  <button id="sendMessage">Send</button>
+              </div>
+          </div>
+    </aside>
+    
+    <section class="content">
+      <h2>Mentors</h2>
+      <div class="mentor-grid">
+        <!-- Mentor Card 1 -->
+        <div class="mentor-card" data-category="game-design">
+          <div class="photo">
+            <img src="images/mentor1.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>John Doe</h3>
+            <p>Specialty: Game Design</p>
+            <p>Experience: 10+ years</p>
+            <a href="mentor1-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 2 -->
+        <div class="mentor-card" data-category="game-production">
+          <div class="photo">
+            <img src="images/mentor2.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Ava Davis</h3>
+            <p>Specialty: Game Production</p>
+            <p>Experience: 8+ years</p>
+            <a href="mentor2-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 3 -->
+        <div class="mentor-card" data-category="art-animation">
+          <div class="photo">
+            <img src="images/mentor3.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Christian Douglas</h3>
+            <p>Specialty: Art & Animation</p>
+            <p>Experience: 7+ years</p>
+            <a href="mentor3-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 4 -->
+        <div class="mentor-card" data-category="ui-ux-design">
+          <div class="photo">
+            <img src="images/mentor4.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Mia Clark</h3>
+            <p>Specialty: UI/UX Design</p>
+            <p>Experience: 5+ years</p>
+            <a href="mentor4-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 5 -->
+        <div class="mentor-card" data-category="game-development">
+          <div class="photo">
+            <img src="images/mentor5.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Alexander Li</h3>
+            <p>Specialty: Game Development</p>
+            <p>Experience: 12+ years</p>
+            <a href="mentor5-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 6 -->
+        <div class="mentor-card" data-category="game-design">
+          <div class="photo">
+            <img src="images/mentor6.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Ethan Brown</h3>
+            <p>Specialty: Game Design</p>
+            <p>Experience: 6+ years</p>
+            <a href="mentor6-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 7 -->
+        <div class="mentor-card" data-category="game-writing">
+          <div class="photo">
+            <img src="images/mentor7.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Mason Taylor</h3>
+            <p>Specialty: Game Writing</p>
+            <p>Experience: 7+ years</p>
+            <a href="mentor7-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 8 -->
+        <div class="mentor-card" data-category="qa">
+          <div class="photo">
+            <img src="images/mentor8.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Emma Williams</h3>
+            <p>Specialty: Quality Assurance</p>
+            <p>Experience: 5+ years</p>
+            <a href="mentor8-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 9 -->
+        <div class="mentor-card" data-category="game-design">
+          <div class="photo">
+            <img src="images/mentor9.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Harper Lee</h3>
+            <p>Specialty: Game Design</p>
+            <p>Experience: 8+ years</p>
+            <a href="mentor9-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 10 -->
+        <div class="mentor-card" data-category="game-development">
+          <div class="photo">
+            <img src="images/mentor10.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Maxwell Young</h3>
+            <p>Specialty: Game Development</p>
+            <p>Experience: 5+ years</p>
+            <a href="mentor10-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 11 -->
+        <div class="mentor-card" data-category="art-animation">
+          <div class="photo">
+            <img src="images/mentor11.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Isabella King</h3>
+            <p>Specialty: Art & Animation</p>
+            <p>Experience: 6+ years</p>
+            <a href="mentor11-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+    
+        <!-- Mentor Card 12 -->
+        <div class="mentor-card" data-category="sound-">
+          <div class="photo">
+            <img src="images/mentor12.jpeg" alt="Mentor Photo">
+          </div>
+          <div class="mentor-details">
+            <h3>Olivia Smith</h3>
+            <p>Specialty: Sound Design</p>
+            <p>Experience: 9+ years</p>
+            <a href="mentor12-profile.html" class="view-profile-button">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <script src="scripts.js"></script>
+</body>
+<footer>
+        <p>&copy; 2024 GameDevConnect</p>
+    </footer>
+</html>
