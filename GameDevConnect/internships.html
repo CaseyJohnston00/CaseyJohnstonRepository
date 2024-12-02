@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs - Game Dev Connect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>GameDevConnect</h1>
+    <div class="tagline">Bridging Senior Developers with Emerging Talent</div>
+    <div class="logo-container">
+        <img src="images/logo.png" alt="GameDevConnect Logo" class="site-logo">
+      </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="internships.html">Internships</a>
+      <a href="mentors.html">Mentors</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact-us.html">Contact Us</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <div class="coming-soon">
+        <span>Coming Soon!</span>
+        <span class="arrow">&#8594;</span>
+      </div>
+      <a href="#" class="sign-up-link">
+        <button class="sign-up">Sign Up</button>
+      </a>
+      <a href="#" class="log-in-link">
+        <button class="log-in">Log In</button>
+      </a>
+    </div>
+  </header>
+  <script src="script.js"></script>
+  <main>
+    <aside class="sidebar">
+        <form id="filterForm">
+          <div class="categories">
+            <h3>Filter by Category</h3>
+            <label><input type="checkbox" class="category-filter" value="game-design"> Game Design</label>
+            <label><input type="checkbox" class="category-filter" value="game-development"> Game Development</label>
+            <label><input type="checkbox" class="category-filter" value="level-design"> Level Design</label>
+            <label><input type="checkbox" class="category-filter" value="art-animation"> Art & Animation</label>
+            <label><input type="checkbox" class="category-filter" value="sound-design"> Sound Design</label>
+            <label><input type="checkbox" class="category-filter" value="qa"> Quality Assurance (QA)</label>
+            <label><input type="checkbox" class="category-filter" value="game-production"> Game Production</label>
+            <label><input type="checkbox" class="category-filter" value="ui-ux-design"> UI/UX Design</label>
+            <label><input type="checkbox" class="category-filter" value="game-writing"> Game Writing</label>
+            <label><input type="checkbox" class="category-filter" value="game-engineering"> Game Engineering</label>
+          </div>
+          <div id="location-filters">
+            <h3>Filter by Location</h3>
+            <label><input type="radio" name="location-filter" class="location-filter" value="remote"> Remote</label>
+            <label><input type="radio" name="location-filter" class="location-filter" value="on-site"> On-site</label>
+            <label><input type="radio" name="location-filter" class="location-filter" value="hybrid"> Hybrid</label>
+            <label><input type="radio" name="location-filter" class="location-filter" value="" checked> All</label>
+          </div>
+          <button type="button" onclick="applyFilters()">Apply Filters</button>
+          <button type="button" onclick="resetFilters()">Reset Filters</button>
+
+        </form>
+
+        <div id="chat-box" class="chat-box">
+            <div class="chat-container">
+              <div class="chat-header">
+                  <h3>Live Chat</h3>
+              </div>
+              <div class="chat-messages" id="chatMessages">
+                  <!-- Pre-programmed message -->
+                  <div class="message other">
+                      <p><strong>Admin:</strong> Welcome to the live chat! This feature is coming soon!</p>
+                  </div>
+              </div>
+              <div class="chat-input">
+                  <input type="text" id="userMessage" placeholder="Type your message here..." />
+                  <button id="sendMessage">Send</button>
+              </div>
+          </div>
+      </aside>      
+      
+      <section class="content">
+        <div class="internships-section">
+          <h5>Last updated: November 28, 2024</h5>
+          <h2>Available Internships</h2>
+          <ul class="internship-list">
+            <li data-category="game-engineering" data-location="on-site">
+              <h3>2025 US Summer Internship - Game Engineering</h3>
+              <p><strong>Company:</strong> Infinity Ward</p>
+              <p><strong>Location:</strong> Albany, NY</p>
+              <p><strong>Type:</strong> Internship</p>
+              <a href="https://www.ziprecruiter.com/c/Infinity-Ward/Job/2025-US-Summer-Internship-Game-Engineering/-in-Albany,NY?jid=34a7a4a09350ef1f&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" class="apply-link">Learn More & Apply</a>
+            </li>
+            <li data-category="game-design" data-location="on-site">
+              <h3>Game Design Intern</h3>
+              <p><strong>Company:</strong> Insomniac Games</p>
+              <p><strong>Location:</strong> Burbank, CA</p>
+              <p><strong>Type:</strong> Internship</p>
+              <a href="https://www.ziprecruiter.com/c/Insomniac-Games/Job/Game-Design-Intern-Undergraduate/-in-Burbank,CA?jid=04225fa4a2a588cf&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" class="apply-link">Learn More & Apply</a>
+            </li>
+            <li data-category="sound-design" data-location="remote">
+              <h3>Sound Design Intern - League of Legends - Summer 2025</h3>
+              <p><strong>Company:</strong> Riot Games</p>
+              <p><strong>Location:</strong> Remote</p>
+              <p><strong>Type:</strong> Internship</p>
+              <a href="https://www.riotgames.com/en/work-with-us/job/6356763/sound-design-intern-league-of-legends-summer-2025-remote-los-angeles-usa" class="apply-link">Learn More & Apply</a>
+            </li>
+            <li data-category="game-programming" data-location="on-site">
+              <h3>Gameplay Programming Intern</h3>
+              <p><strong>Company:</strong> Insomniac Games</p>
+              <p><strong>Location:</strong> Burbank, CA</p>
+              <p><strong>Type:</strong> Internship</p>
+              <a href="https://www.ziprecruiter.com/c/Insomniac-Games/Job/Gameplay-Programming-Intern-Undergraduate/-in-Burbank,CA?jid=020023b946ab881b" class="apply-link">Learn More & Apply</a>
+            </li>
+            <li data-category="ux-ui-design" data-location="remote">
+              <h3>UX/UI Designer Internship</h3>
+              <p><strong>Company:</strong> Landell Games</p>
+              <p><strong>Location:</strong> Remote</p>
+              <p><strong>Type:</strong> Internship</p>
+              <a href="https://thehub.io/jobs/664345fd94a3b57bc7d45e3d" class="apply-link">Learn More & Apply</a>
+            </li>
+            <li data-category="game-testing" data-location="on-site">
+              <h3>Game Design/QA Testing</h3>
+              <p><strong>Company:</strong> DreamWorld</p>
+              <p><strong>Location:</strong> Redwood City, CA</p>
+              <p><strong>Type:</strong> Internship</p>
+              <a href="https://www.ycombinator.com/companies/dreamworld/jobs/JbgHlpc-internship-game-design-qa-testing-fall-winter" class="apply-link">Learn More & Apply</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+    
+  </main>
+  <script src="scripts.js"></script>
+</body>
+<footer>
+        <p>&copy; 2024 GameDevConnect</p>
+    </footer>
+</html>
+
